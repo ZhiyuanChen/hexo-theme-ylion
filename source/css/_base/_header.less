@@ -3,7 +3,6 @@
 header {
   box-sizing: border-box;
   position: fixed;
-  background-color: @pageBg;
   z-index: 888;
   overflow: hidden;
   top: 0;
@@ -11,7 +10,8 @@ header {
   width: 100%;
   padding: 0 @pagePadding;
   .textVerCenter(@headerHeight);
-  color: @mainBlack;
+  color: @greyZero;
+  background-color: @redOne;
   .clear-fix();
   &.fixed{
     #site-meta{
@@ -21,7 +21,7 @@ header {
   #site-meta {
     float: left;
     height: 100%;
-    background-color: @pageBg;
+    background-color: @redOne;
     padding-top: 3px;
 
     #logo {
@@ -30,12 +30,12 @@ header {
     }
     .title {
       font-size: .4rem;
-      color: @mainBlack;
+      color: @greyZero;
     }
     .subtitle {
       .inline-block();
       opacity: 1;
-      color: @secondBlack;
+      color: @greyOne;
       font-weight: 200;
       font-size: .16rem;
       margin-left: .1rem;
@@ -43,7 +43,7 @@ header {
   }
   #nav {
     float: right;
-    background-color: @pageBg;
+    background-color: @redOne;
     .clear-fix();
     li {
       .inline-block();
@@ -52,11 +52,11 @@ header {
       padding: .29rem 0 (@headerHeight/2-0.29);
     }
     a {
-      color: @secondBlack;
+      color: @greyOne;
       padding: 0 .06rem;
       display: block;
       &:hover, &.actived {
-        color: @mainBlack;
+        color: @greyZero;
       }
       i {
         margin-right: .07rem;
